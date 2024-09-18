@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int x = 0;
+    int x;
 
     scanf("%d", &x);
     printf("%05d", x);
