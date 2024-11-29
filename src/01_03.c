@@ -7,4 +7,5 @@ int main() {
     printf("%d", first * second);
 
     return 0;
+    
 }
