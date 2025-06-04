@@ -2,11 +2,11 @@
 
 int max(int a, int b);
 
-void main() {
+int main() {
     int x, y;
     scanf("%d%d", &x, &y);
     int z = max(x, y);
-    printf("Max = %d", z);
+    printf("Max = %d\n", z);
 }
 
 int max(int a, int b) {

@@ -1,0 +1,6 @@
+#ifndef TWENTY_TEST
+#define TWENTY_TEST
+
+#define M_PI 3.14159265358979323846
+
+#endif

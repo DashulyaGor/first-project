@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Указываем имя файла без расширения
-FILE_NAME=second_test
+FILE_NAME=third_test
 
 # Компиляция программы
 gcc $FILE_NAME.c -o $FILE_NAME
