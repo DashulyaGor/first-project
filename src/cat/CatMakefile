@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -std=c11 -Wall -Werror -Wextra -g
+all: cat_5
+
+cat:
+	$(CC) $(CFLAGS) cat_5.c -o cat_5
+
+clean:
+	rm -rf *.o
+
+rebuild: clean all
