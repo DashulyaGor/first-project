@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
+int main(){
     double radian, degree;
 
     if (scanf("%lf", &radian) == 1) {
         degree = 57.29 * radian;
-        printf("%.0lf", roundf(degree));
+        printf("%.0lf\n", roundf(degree));
     } else {
         printf("n/a");
     }

@@ -13,9 +13,9 @@ int main() {
         }
 
         third = x % 10;
-        x = x / 10;
+        x = (x - third) / 10;
         second = x % 10;
-        first = x / 10;
+        first = (x - second) / 10;
 
         if (flag == 1) {
             printf("%d%d%d", third, second, first);
