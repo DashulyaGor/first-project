@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -std=c11 -Wall -Werror -Wextra -g
+INCLUDE_PATHS = -I"C:/MinGW/include/pcre2-10.44/src/"
+LIBRARY_PATHS = -LC:/MinGW/include/pcre2-10.44/.libs/
+LIBRARIES = -lpcre2-8
+
+all: grep_4
+
+grep_4: grep_4.c
+	$(CC) $(CFLAGS) $(INCLUDE_PATHS) $(LIBRARY_PATHS) $< $(LIBRARIES) -o $@
+
+clean:
+	rm -rf grep_4 *.o
+
+rebuild: clean all
