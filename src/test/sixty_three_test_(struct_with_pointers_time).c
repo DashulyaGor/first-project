@@ -39,18 +39,7 @@ int main() {
 int time2min(TicTac t) {
     return t.h * 60 + t.min;
 }
-/*
-void min2time(int mm, int *ph, int *pm){
 
-    *ph = mm / 60;
-    if(*ph > 24){
-        (*ph) -= 24;
-    } else if(*ph == 24){
-        *ph = 00;
-    }
-    *pm = mm % 60;
-}
-*/
 TicTac min2time(int mm) {
     return (TicTac){(mm / 60) % 12, mm % 60};
 }
@@ -59,7 +48,6 @@ TicTac after(TicTac a, int min) {
     TicTac res = a;
     int t = time2min(res);
     t += min;
-    //res.min += min;
     res = min2time(t);
     if (res.h == 12) {
         res.h = 00;
@@ -87,7 +75,6 @@ void forward(TicTac *me, TicTac a) {
         res.min = 00;
     } else if (res.min > 60) {
         res.h++;
-        //res.min = 00 + (res.min + a.min) % 60;
     }
     *me = res;
 }
@@ -96,20 +83,14 @@ void backward(TicTac *me, TicTac a) {
     me->h -= a.h;
     me->min -= a.min;
     TicTac res = *me;
-    //int t = time2min(*me) - time2min(a);
-    //res = min2time(t);
 
     if (res.h == 12) {
         res.h = 00;
-    //} else if (res.h < 00) {
-        //res.h = 12 - a.h;
-        //res.h = -res.h;
     } else if (res.min == 60) {
         res.min = 00;
     } else if (res.min < 00) {
         res.h = 12 - 1;
         res.min = 60 - a.min;
-        //res.min = -res.min;
     }
 
     *me = res;
