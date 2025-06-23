@@ -38,6 +38,11 @@ void exponent_property(double a, int m, int n) {
     double left_side = ipow(a, m) / ipow(a, n);
     double right_side = ipow(a, m - n);
 
+    if (a == 0) {
+        left_side = 0;
+        right_side = 0;
+    }
+
     if (left_side == right_side) {
         printf("The property is fulfilled:\n");
         printf("%.2lf ^ %d / %.2lf ^ %d = %.2lf\n", a, m, a, n, left_side);
