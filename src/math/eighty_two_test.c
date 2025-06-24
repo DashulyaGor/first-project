@@ -2,7 +2,7 @@
 
 
 long long int ipow(long long int a, unsigned int n);
-void exponent_property(long long int a, unsigned int m, unsigned int n);
+void exponent_property(long long int a, long long int b, unsigned int n);
 
 int main() {
     long long int x;
@@ -32,14 +32,14 @@ long long int ipow(long long int a, unsigned int n){
     return res;
 }
 
-void exponent_property(long long int a, unsigned int m, unsigned int n) {
-    long long int left_side = ipow(ipow(a, m), n);
-    long long int right_side = ipow(a, m * n);
+void exponent_property(long long int a, long long int b, unsigned int n) {
+    long long int left_side = ipow(a * b, n);
+    long long int right_side = ipow(a, n) * ipow(b, n);
 
     if (left_side == right_side) {
         printf("The property is fulfilled:\n");
-        printf("(%lld ^ %u) ^ %u = %lld\n", a, m, n, left_side);
-        printf("%lld ^ (%u * %u) = %lld\n", a, m, n, right_side);
+        printf("(%lld * %lld) ^ %u = %lld\n", a, b, n, left_side);
+        printf("%lld ^ %u * %lld ^ %u = %lld\n", a, n, b, n, right_side);
         printf("%lld = %lld\n", left_side, right_side);
     } else {
         printf("Calculation error!\n");
