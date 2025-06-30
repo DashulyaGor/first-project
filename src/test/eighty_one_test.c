@@ -28,17 +28,4 @@ void sort3(int * x, int * y, int * z) {
         sort2(y, z);
     }
 }
-    /*
-    if (*z > *y && *z > *x) {
-        sort2(z, x);
-        sort2(z, y);
-    }
-    if (*x > *y && *x > *z) {
-        sort2(x, y);
-        sort2(x, z);
-    }
-    if (*y > *z && *y > *x) {
-        sort2(y, x);
-        sort2(y, z);
-    }
-    */
+
