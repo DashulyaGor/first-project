@@ -33,8 +33,8 @@ long long int ipow(long long int a, unsigned int n){
 }
 
 void exponent_property(long long int a, unsigned int m, unsigned int n) {
-    long long int left_side = ipow(ipow(a, m), n);
-    long long int right_side = ipow(a, m * n);
+    long long int left_side = ipow(a, m) * ipow(a, n);
+    long long int right_side = ipow(a, m + n);
 
     if (left_side == right_side) {
         printf("The property is fulfilled:\n");
