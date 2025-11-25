@@ -6,16 +6,18 @@ int main() {
     scanf("%d", &n);
     scanf("%d", &number);
     min = number;
+    printf("%d ", number);
 
     for (int i = 1; i < n; ++i) {
         
         scanf("%d", &number);
+        printf("%d ", number);
 
         if (number < min) {
             min = number;
         }
     }
 
-    printf("%d\n", min);
+    printf("\n%d\n", min);
     return 0;
 }
