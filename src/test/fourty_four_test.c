@@ -18,7 +18,8 @@ int fib(int n, int depth) {
 }
 
 int main() {
-    int n = 20;
+    int n;
+    scanf("%d", &n); // считываем число n с клавиатуры (например, "20
     printf("main: fib(%d) = %d\n", n, fib(n, 1));
     
     // Выводим общее количество вызовов функции fib
