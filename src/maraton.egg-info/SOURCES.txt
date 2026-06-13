@@ -1,0 +1,13 @@
+pyproject.toml
+setup.py
+/mnt/c/Users/DariaMay/first-project/src/maraton/robinson_cruise.c
+/mnt/c/Users/DariaMay/first-project/src/maraton/robinson_cruise_with_request_JSON.c
+maraton/__init__.py
+maraton/models.py
+maraton/robinson_cruise_with_request_JSON.h
+maraton.egg-info/PKG-INFO
+maraton.egg-info/SOURCES.txt
+maraton.egg-info/dependency_links.txt
+maraton.egg-info/not-zip-safe
+maraton.egg-info/top_level.txt
+tests/test_robinson.py
